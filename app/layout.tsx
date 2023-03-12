@@ -13,11 +13,17 @@ export default function RootLayout({
  }) {
   const header = (
     <header>
-      <div className="text-center bg-slate-400 p-6 my-6 rounded-md">
-        <Link href="/">
-          <h1 className="text-3xl font-bold text-white mt-4">{metadata.title}</h1>
-        </Link>
-        <p className="text-slate-300">{metadata.description}</p>
+      <div className="text-center bg-cyan-700 p-6 my-4 rounded-md">
+        <h1 className="text-3xl font-bold text-white mt-2">{metadata.title}</h1>
+        <div className="flex justify-center mt-3 gap-3 ">
+          <Link href="/">
+            <button className="bg-transparent hover:bg-blue-500 text-white font-semibold hover:text-white py-1 px-3 border border-blue-500 hover:border-transparent rounded">Home</button>
+          </Link>
+
+          <Link href="/posts">
+            <button className="bg-transparent hover:bg-blue-500 text-white font-semibold hover:text-white py-1 px-3 border border-blue-500 hover:border-transparent rounded">Posts</button>
+          </Link>
+          </div>
       </div>
       <br />
     </header>
@@ -25,7 +31,7 @@ export default function RootLayout({
   
   const footer = (
     <footer>
-      <div className="border-t border-slate-00 mt-6 py-3 text-center text-slate-400">
+      <div className="border-t border-slate-300 mt-6 py-3 text-center border-center text-slate-400">
         <br />
         developed by ashvin. [2023]
       </div>
