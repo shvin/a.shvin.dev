@@ -1,12 +1,13 @@
 ---
-title: "Next.js Blog Portfolio Site"
-subtitle: "next.js(13) portfolio site with static rendered .md blog pages and tailwindCSS."
+title: "Serverless Blog Site"
+subtitle: "next.js(13) lightweight portfolio site with static rendered .md blog pages"
 date: "2023-03-11"
 ---
 
-### [src]
+### [src/stack]
 - https://github.com/shvin/a.shvin.dev
 - https://a.shvin.dev
+- typescript, next.js, tailwindcss
 
 ### Concept
 I recently realized that expanding and modifying my [previous](https://ashvincodes-shvin.vercel.app/) portfolio site was complicated and messy despite utilizing reusable project and post components. 
@@ -56,4 +57,4 @@ Setup Localhost Dev Environment
 ```
 npm run dev
 ```
-The [default port](localhost:3000) it loads up on is `localhost:3000`.
+The [default port](localhost:3000) it loads up on is [`localhost:3000`](https://github.com/liOscar58/acs-app.git).

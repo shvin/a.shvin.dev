@@ -7,8 +7,7 @@ const getPostMetadata = (): PostMetadata[] => {
     const folder = "posts/";
     const files = fs.readdirSync(folder);
     const mdPosts = files.filter((file) => file.endsWith(".md"));
-  
-    // using gray-matter to parse the blog post metadata section
+
     const posts = mdPosts.map((fileName) => {
       const fileContents = fs.readFileSync(`posts/${fileName}`, 'utf8');
       const graymatterResult = matter(fileContents);
@@ -19,7 +18,13 @@ const getPostMetadata = (): PostMetadata[] => {
         file: fileName.replace(".md", ""),
       };
     });
-    return posts;
+    return posts.sort((a, b) => {
+      if (a.date < b.date) {
+        return 1;
+      } else {
+        return -1;
+      }
+    });
 };
 
 export default getPostMetadata;

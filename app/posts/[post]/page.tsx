@@ -25,14 +25,14 @@ const PostPage = (props: any) => {
     return (
         <div>
             <div className="border-b border-slate-800">
-                <h1 className="text-3xl text-black font-bold">
+                <h1 className="text-3xl text-white font-bold font-mono">
                     {content.data.title}
                 </h1>
-                <p className="text-grey mt-1 mb-2">
+                <p className="text-white mt-1 mb-2">
                     {content.data.date}
                 </p>
             </div>
-            <article className="prose md:prose-xl">
+            <article className="prose md:prose-xl prose-invert max-w-none">
                 <Markdown>
                     {content.content}
                 </Markdown>
