@@ -57,4 +57,4 @@ Setup Localhost Dev Environment
 ```
 npm run dev
 ```
-The [default port](localhost:3000) it loads up on is [`localhost:3000`](https://github.com/liOscar58/acs-app.git).
+The default port it loads up on is `localhost:3000`.

@@ -13,7 +13,7 @@ export default function RootLayout({
  }) {
   const header = (
     <header>
-      <div className="text-center bg-gray-900 p-6 my-4 border-b border-slate-300">
+      <div className="text-center bg-gray-900 p-6 my-2 border-b border-slate-300">
         <h1 className="text-3xl font-bold text-white mt-2 font-mono">{metadata.title}</h1>
         <div className="flex justify-center mt-3 gap-3 ">
           <Link href="/">
