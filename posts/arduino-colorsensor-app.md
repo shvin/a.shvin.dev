@@ -2,6 +2,8 @@
 title: "Color Sensor Application"
 subtitle: "IoT arduino solution to color recognition for the visually impaired"
 date: "2023-03-13"
+tag: "IoT"
+lastUpdated: "2023-03-14"
 ---
 
 ### [src/stack]

@@ -15,6 +15,8 @@ const getPostMetadata = (): PostMetadata[] => {
         title: graymatterResult.data.title,
         date: graymatterResult.data.date,
         subtitle: graymatterResult.data.subtitle,
+        tag: graymatterResult.data.tag,
+        lastUpdated: graymatterResult.data.lastUpdated,
         file: fileName.replace(".md", ""),
       };
     });

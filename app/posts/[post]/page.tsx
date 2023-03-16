@@ -28,9 +28,12 @@ const PostPage = (props: any) => {
                 <h1 className="text-3xl text-white font-bold font-mono">
                     {content.data.title}
                 </h1>
-                <p className="text-white mt-1 mb-2">
-                    {content.data.date}
-                </p>
+                <div className="flex space-x-2">
+                    <p className="text-white text-lg mt-1 mb-2">released: </p>
+                    <p className="text-blue-500 text-lg mt-1 mb-2">{content.data.date}</p>
+                    <p className="text-white text-lg mt-1 mb-2">|  updated: </p>
+                    <p className="text-blue-500 text-lg mt-1 mb-2">{content.data.lastUpdated}</p>
+                </div>
             </div>
             <article className="prose md:prose-xl prose-invert max-w-none">
                 <Markdown>

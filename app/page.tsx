@@ -4,7 +4,7 @@ export default function Home() {
     <div className="flex flex-col items-center justify-center">
       <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
         <h1 className="text-6xl font-semibold">
-          welcome to <a className="font-light">a.shvin.dev</a>
+          welcome to <a className="font-light text-blue-500">a.shvin.dev</a>
         </h1>
 
         <p className="mt-3 text-2xl font-serif">
@@ -26,7 +26,7 @@ export default function Home() {
         <div className="group border-2 border-slate-400 p-4 rounded-md ">
           <h2 className="text-2xl font-semibold border-b">About</h2>
           <p className="mt-3 text-lg">
-            I'm a 2nd year Computer Science student at the <a className="text-blue-500">University of Ottawa</a>. I'm interested in <a className="text-blue-500">bash/lua</a> scripting, <a className="text-blue-500">fullstack</a> development, and <a className="text-blue-500">IoT</a> devices. Located in <a className="text-blue-500">Atlanta, USA</a> & <a className="text-blue-500">Ottawa, Canada</a>.
+            I'm a 2nd year Computer Science student at the <a className="text-blue-500">University of Ottawa</a>. I'm interested in <a className="text-blue-500">bash</a>/<a className="text-blue-500">lua</a> scripting, <a className="text-blue-500">fullstack</a> development, and <a className="text-blue-500">IoT</a> devices. Located in <a className="text-blue-500">Atlanta, USA</a> & <a className="text-blue-500">Ottawa, Canada</a>.
           </p>
         </div>
         <div className="group border-2 border-slate-400 p-4 rounded-md">
@@ -36,7 +36,7 @@ export default function Home() {
             </a>
           </p>
           <p className="mt-3 text-lg">
-            &rarr; <a href="https://github.com/shvin/" className="font-mono hover:underline text-blue-500">Github</a>
+            &rarr; <a href="https://github.com/shvin/" className="font-mono hover:underline text-blue-500">GitHub</a>
           </p>
           <p className="mt-3 text-lg">
             &rarr; <a href="https://www.linkedin.com/in/ashvinr03/" className="font-mono hover:underline text-blue-500">LinkedIn</a>
