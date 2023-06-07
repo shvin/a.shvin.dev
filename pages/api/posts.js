@@ -10,7 +10,7 @@ const sortByKey = (key) => {
 };
 
 const getPostMetadata = () => {
-  const folder = "posts/";
+  const folder = "./posts/";
   const files = fs.readdirSync(folder);
   const mdPosts = files.filter((file) => file.endsWith(".md"));
 
