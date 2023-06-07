@@ -1,9 +1,9 @@
-import fs from "fs";
-import matter from "gray-matter";
+import fs from 'fs';
+import matter from 'gray-matter';
 import { PostMetadata } from "./PostMetadata";
 
 
-const getPostMetadata = (): PostMetadata[] => {
+const getPostMetadata = (sortKey?: string): PostMetadata[] => {
     const folder = "posts/";
     const files = fs.readdirSync(folder);
     const mdPosts = files.filter((file) => file.endsWith(".md"));
@@ -20,13 +20,15 @@ const getPostMetadata = (): PostMetadata[] => {
         file: fileName.replace(".md", ""),
       };
     });
-    return posts.sort((a, b) => {
-      if (a.date < b.date) {
-        return 1;
-      } else {
-        return -1;
-      }
-    });
+    const sortBy = (key: string) => {
+      return (a: any, b: any) => {
+        if (a[key] > b[key]) return -1;
+        if (a[key] < b[key]) return 1;
+        return 0;
+      };
+    }
+    const sortedPosts = sortKey ? posts.sort(sortBy(sortKey)) : posts;
+    return sortedPosts;
 };
 
 export default getPostMetadata;

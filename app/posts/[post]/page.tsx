@@ -23,25 +23,30 @@ const PostPage = (props: any) => {
     const content = getPostData(post);
 
     return (
-        <div>
-            <div className="border-b border-slate-800">
-                <h1 className="text-3xl text-white font-bold font-mono">
-                    {content.data.title}
-                </h1>
-                <div className="flex space-x-2">
-                    <p className="text-white text-lg mt-1 mb-2">released: </p>
-                    <p className="text-blue-500 text-lg mt-1 mb-2">{content.data.date}</p>
-                    <p className="text-white text-lg mt-1 mb-2">|  updated: </p>
-                    <p className="text-blue-500 text-lg mt-1 mb-2">{content.data.lastUpdated}</p>
-                </div>
+      <div>
+        <div className="flex flex-col items-center">
+          <div className="border-b border-slate-800 px-4 py-2 text-center">
+            <h1 className="text-3xl text-white font-bold font-mono mb-2">
+              {content.data.title}
+            </h1>
+            <div className="flex flex-wrap items-baseline justify-center space-y-2">
+              <div className="flex items-center mr-4">
+                <p className="text-white text-lg mr-1">released:</p>
+                <p className="text-blue-400 text-lg">{content.data.date}</p>
+              </div>
+              <div className="flex items-center">
+                <p className="text-white text-lg mr-1">updated:</p>
+                <p className="text-blue-400 text-lg">{content.data.lastUpdated}</p>
+              </div>
             </div>
-            <article className="prose md:prose-xl prose-invert max-w-none">
-                <Markdown>
-                    {content.content}
-                </Markdown>
-            </article>
+          </div>
         </div>
+        <article className="prose md:prose-xl prose-invert max-w-none">
+          <Markdown>{content.content}</Markdown>
+        </article>
+      </div>
     );
+    
 };
 
 export default PostPage;
